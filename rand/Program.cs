@@ -18,28 +18,24 @@ while (f)
     else if (a < c)
     {
         Console.WriteLine("Загаданое число больше!");
-        p -= 1;
-        Console.WriteLine($"Осталось {p} попыток");
-        if (p == 0)
-        {
-            //Console.WriteLine($"delete system32...");
-            Console.WriteLine($"Увы,ты проиграл!");
-            Console.WriteLine($"Загаданное число было {c}");
-            f = false;
-        }
+        pop();
     }
-    else if (a > c)
+    else
     {
         Console.WriteLine("Загаданое число меньше!");
-        p -= 1;
-        Console.WriteLine($"Осталось {p} попыток");
-        if (p == 0)
-        {
-            //Console.WriteLine($"delete system32...");
-            Console.WriteLine($"Увы,ты проиграл!");
-            Console.WriteLine($"Загаданное число было {c}!");
-            f = false;
-        } 
+        pop();
     }
 }
 
+void pop()
+{
+    p -= 1;
+    Console.WriteLine($"Осталось {p} попыток");
+    if (p == 0)
+    {
+        //Console.WriteLine($"delete system32...");
+        Console.WriteLine($"Увы,ты проиграл!");
+        Console.WriteLine($"Загаданное число было {c}!");
+        f = false;
+    }
+}
